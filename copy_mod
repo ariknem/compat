@@ -1,0 +1,4 @@
+. setenv.sh
+
+find . -name *.ko -exec arm-none-linux-gnueabi-strip --strip-unneeded {} \;
+find . -name *.ko -exec adb push {} /system/lib/modules/ \;
